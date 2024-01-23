@@ -21,7 +21,6 @@ public class Exam {
     // collect user input
     public void collectInput() {
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("ID: ");
         stuId = scanner.nextInt();
         System.out.print("Name: ");
@@ -41,6 +40,7 @@ public class Exam {
         scanner.close();
     }
 
+    //display result to the user
     public void displayResults(double[] scores) { // set to public for testing
         double total = calTotal(scores);
         double average = calAverage(scores);
