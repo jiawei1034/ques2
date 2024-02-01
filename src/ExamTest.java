@@ -4,18 +4,33 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ExamTest {
 
     @Test
-    public void testCalTotal() {
-        double[] scores = {90.5, 85.0, 92.5, 78.0, 88.5, 95.0};
-        Exam exam = new Exam(120183, "Jay Chou", 1);
-        double result = exam.total(scores);
-        assertEquals(529.5, result, 0.0001); 
+    public void testcalcTotal() {
+        Exam exam = new Exam(123456, "John Doe", 5);
+        double[] scores = {80, 75, 90, 85, 95, 88};
+        exam.setScores(scores);
+        double expectedTotal = 513.0;
+        double actualTotal = exam.calcTotal();
+        assertEquals(expectedTotal, actualTotal, 0.01); 
     }
 
     @Test
-    public void testCalAverage() {
-        double[] scores = {90.5, 85.0, 92.5, 78.0, 88.5, 95.0};
-        Exam exam = new Exam(170434, "Brandon", 1);
-        double result = exam.average(scores);
-        assertEquals(88.25, result, 0.0001); 
+    public void testcalcAverage() {
+        Exam exam = new Exam(123456, "John Doe", 5);
+        double[] scores = {80, 75, 90, 85, 95, 88};
+        exam.setScores(scores);
+        double expectedAverage = 85.5;
+        double actualAverage = exam.calcAverage();
+        assertEquals(expectedAverage, actualAverage, 0.01); 
+    }
+
+    @Test
+    public void testcalcMaximum() {
+        Exam exam = new Exam(123456, "John Doe", 5);
+        double[] scores = {80, 75, 90, 85, 95, 88};
+        exam.setScores(scores);
+        double expectedMaximum = 95.0;
+        double actualMaximum = exam.findMax();
+        assertEquals(expectedMaximum, actualMaximum, 0.01); 
     }
 }
+
