@@ -13,12 +13,34 @@ public class Exam {
         this.scores = new double[6];
     }
 
-    //Setter method
+    public void setStuId(int stuId) {
+        this.stuId = stuId;
+    }
+
+    public int getStuId() {
+        return stuId;
+    }
+
+    public void setStuName(String stuName) {
+        this.stuName = stuName;
+    }
+
+    public String getStuName() {
+        return stuName;
+    }
+
+    public void setsubLevel(int subLevel) {
+        this.subLevel = subLevel;
+    }
+
+    public int getsubLevel() {
+        return subLevel;
+    }
+
     public void setScores(double[] scores) {
         this.scores = scores;
     }
 
-    //Getter method
     public double[] getScores() {
         return scores;
     }
@@ -41,11 +63,8 @@ public class Exam {
         return scores[5]; 
     }
 
-    @Override
-    public String toString() {
-        return "STUDENT INFO\n" +
-                "Id: " + stuId + "\n" +
-                "Name: " + stuName + "\n" +
-                "Level: " + subLevel;
-    }
+    // @Override
+    // public String toString() {
+    //     return "Exam{Id='" + stuId + "', name=" + subLevel + "}";
+    // }
 }
